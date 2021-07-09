@@ -1,5 +1,4 @@
 import { Collection, ObjectId } from 'mongodb';
-
 export interface Viewer {
   _id?: string;
   token?: string;
@@ -48,6 +47,7 @@ export interface Listing {
   bookingsIndex: BookingsIndex;
   price: number;
   numOfGuests: number;
+  authorized?: boolean;
 }
 
 export interface User {
@@ -60,6 +60,7 @@ export interface User {
   income: number;
   bookings: ObjectId[];
   listings: ObjectId[];
+  authorized?: boolean;
 }
 
 export interface Database {
